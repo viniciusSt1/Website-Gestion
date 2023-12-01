@@ -1,0 +1,201 @@
+.my-space{
+    background-color: var(--primary-color5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 1028px;
+    padding: 0;
+}
+
+.my-space-box{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.my-space-title{
+    position: absolute;
+    top:100px;
+    left:min(150px,12%);
+}
+
+.my-space-title h2{
+    color:var(--title-color2);
+    font-size: 5.8rem;
+}
+
+.my-space-title h3{
+    color:var(--primary-color4);
+    font-size: 4.8rem;
+}
+
+.my-space-title p{
+    display: none;
+}
+
+.my-space-box .my-space-group>img:first-of-type{
+    position: absolute;
+    bottom:100px;
+}
+
+.my-space-box .my-space-group>img:last-of-type{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    filter:brightness(45%);
+    height: 700px;
+    background-attachment: local;
+}
+
+.card-my-space{
+    z-index:1;
+    background-color: var(--background-cards);
+    width:90%;
+    max-width: 478px;
+    position:absolute;
+    bottom:140px;
+    left:200px;
+    padding:5rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 2px gray;
+}
+
+.card-my-space>img{
+    display: none;
+}
+
+.card-my-space h4{
+    font-size:4.8rem;
+    line-height: 1.2;
+}
+
+.card-my-space p{
+    color:var(--text-color2);
+    font-size:2.4rem;
+    margin:2rem 0;
+}
+
+@media (max-width:1000px) and (min-width:641px){    /*tablet*/
+    .my-space{
+        height: 80rem;
+    }
+    .my-space-title{
+        top:50px;
+        left:75px;
+    }
+    .my-space-title h2{
+        font-size: 5rem;
+    }
+    .my-space-title h3{
+        color:var(--primary-color4);
+        font-size: 3rem;
+    }
+    .my-space-box img:first-of-type{
+        display: none;
+    }
+    .my-space-box img:last-of-type{
+        max-height: 600px;
+    }
+    .card-my-space{
+        left: 100px;
+        bottom:100px;
+    }
+    .card-my-space>h4{
+        font-size:3.8rem;
+    }
+    .card-my-space>p{
+        font-size:2rem;
+    }
+    .card-my-space>button{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:640px){   /*Mobile*/
+    .my-space{
+        background-color: transparent;
+        display: flex;
+        justify-content: flex-end;
+        min-height: unset;
+        padding:40px 0;
+        height: unset;
+    }
+    .my-space .my-space-box{
+        width: 95%;
+    }
+    .my-space-title{
+        position: static;
+    }
+    .my-space-title h2{
+        color:var(--primary-color3);
+        font-size: 1.4rem;
+    } 
+    .my-space-title h3{
+        color:var(--title-color1);
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+    .my-space-title>p{
+        color:var(--text-color3);
+        font-size: 1.5rem;
+        display: block;
+        margin:2rem 0;
+    }
+    .my-space-group{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .my-space-group .card-my-space{
+        position: static;
+        width:50%;
+        min-width: 200px;
+        margin-left: 20px;
+        padding:10px;
+        margin-right: -100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+    .my-space-group .card-my-space>img{
+        display: block;
+        width: 31px;
+        height: 31px;
+    }
+    .card-my-space h4{
+        font-size:1.8rem;
+        line-height: 1.2;
+        text-align: center;
+    }
+    .card-my-space p{
+        display: none;
+    }
+    .my-space-box .my-space-group>img:first-of-type{
+        display: none;
+    }
+    .my-space-box .my-space-group>img:last-of-type{
+        position: static;
+        width:max(227px,70%);
+        height:max(227px,70%);
+        aspect-ratio:1/1;
+    }
+    .card-my-space>button{
+        font-size: 1.6rem;
+        margin-top:1rem;
+        padding:1rem;
+        font-weight: bold;
+        background:none;
+        color:var(--primary-color3);
+        border:1px solid var(--primary-color3);
+        border-radius: 6px;
+    } 
+}
+
+@media (min-width:1440px){
+    .my-space .my-space-box .my-space-title{
+        left:0;
+    }
+}

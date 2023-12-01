@@ -1,0 +1,185 @@
+.services>img{
+    display: none;
+}
+
+.services-box{
+    width: 90%;
+    max-width: 1440px;
+    gap:10%;
+    justify-content: space-between;
+}
+
+.services-box-text{
+    width: 40%;
+}
+
+.services-box-text h2{
+    color:var(--primary-color3);
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.services-box-text h3{
+    font-size: 5.8rem;
+    line-height: 1;
+}
+
+.services-box-text p{
+    color:var(--text-color3);
+    font-size: 2.4rem;
+    margin:3rem 0;
+}
+
+.services-box-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas de largura igual */
+    gap: 20px;
+}
+
+.services-box-cards .card-service{
+    width: 29rem;
+    box-shadow: 0 0 15px rgba(128,128,128,0.8);
+    padding:2.6rem 2.6rem 4rem 2.6rem;
+    position: relative;
+}
+
+.services-box-cards .card-service button{
+    background:none;
+    color:var(--primary-color3);
+    border:1px solid var(--primary-color3);
+    padding:1rem;
+    border-radius: 6px;
+    font-size: 2.4rem;
+}
+
+.services-box-cards>.card-service img{
+    max-width: 48px;
+    max-height: 25px;
+}
+
+.services-box-cards>.card-service h4{
+    font-size: 2.4rem;
+    font-weight: normal;
+}
+
+.services-box-cards .card-service:last-of-type h4:last-of-type{
+    display: none;
+}
+
+.services-box-cards>.card-service p{
+    font-size:1.6rem;
+    color:var(--text-color3);
+    margin:3rem 0;
+}
+
+@media (max-width:965px) and (min-width:641px){     /*Tablet*/
+    .services-box-text h2{
+        font-size: 2rem;
+    }
+    .services-box-text h3{
+        font-size: 4.8rem;
+    }
+    .services-box-text p{
+        font-size: 2rem;
+    }
+    .services-box-text button{
+        font-size: 2rem;
+        padding:0.6rem 1.8rem;
+    }
+    .services-box-cards{
+        overflow-x: scroll;
+        grid-template-columns: repeat(4, 1fr);
+        padding:30px;
+    }
+    .services-box-cards .card-service{
+        box-shadow: 0 0 10px rgba(128,128,128,0.5);
+    }
+}
+
+@media (max-width:640px){   /*Mobile*/
+    .services{
+        position: relative;
+        overflow:visible;
+    }
+    .services>img:first-of-type{
+        position: absolute;
+        display: block;
+        top:-25px;
+        left:-50px;
+        z-index: -1;
+        width: 225px;
+        height: 145px;
+    }
+    .services>img:last-of-type{
+        position: absolute;
+        display: block;
+        bottom:0;
+        right:0;
+        z-index: -1;
+   
+    }
+    .services-box{
+        flex-direction: column;
+    }
+    .services-box .services-box-text{
+        width:100%;
+    }
+    .services-box .services-box-text h2{
+        display: none;
+    }
+    .services-box .services-box-text h3{
+        font-size: 2.4rem;
+        width: 17rem;
+        line-height: 1.4;
+    }
+    .services-box .services-box-text span{
+        color:var(--primary-color3);
+    }
+    .services-box .services-box-text p{
+        font-size: 1.5rem;
+        margin:1rem 0 3rem;
+    }
+    .services-box .services-box-text button{
+        display: none;
+    }
+    .services-box-cards{
+        width: 100%;
+        column-gap:5px;
+        row-gap: 20px;
+        padding:5px;
+        overflow-x:scroll;
+    }
+    .services-box-cards .card-service{
+        width: 15rem;
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:15px;
+        margin:0 auto;
+        box-shadow: 0 0 5px rgba(128,128,128,0.5);
+        position: relative;
+    }
+    .services-box-cards .card-service img{
+        transform: scale(0.7);
+    }
+    .services-box-cards .card-service h4{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .services-box-cards .card-service:last-of-type h4:last-of-type{
+        display: block;
+    }
+    .services-box-cards .card-service:last-of-type h4:first-of-type{
+        display: none;
+    }
+    .services-box-cards .card-service p{
+        display: none;
+    }
+    .services-box-cards .card-service button{
+        font-size: 1.4rem;
+        margin-top:1rem;
+        padding:1rem;
+        font-weight: bold;
+    }
+}
